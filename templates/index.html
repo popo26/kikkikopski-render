@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE HTML>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	{% block head %}
+	<head>
+		<title>Kikki Kopski</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+		<!-- Favicon -->
+		<link rel="icon" href="{{ url_for('download_image', resource='favicon5.ico')}}">
+		
+	</head>
+	{% endblock %}
+	<body class="is-preload">
+
+
+
+		<!-- Header -->
+		
+			<header id="header">
+				
+				<!-- <img src="static/images/logo2.png" width=70px alt=""> -->
+				<img class='kikki-logo' src="{{ url_for('download_image', resource='logo2.png') }}" alt="">
+				<nav>
+					<ul>
+						<li><a href="#intro">Intro</a></li>
+						<li><a href="#one">What I Do</a></li>
+						<li><a href="#two">Who I Am</a></li>
+						<li><a href="#work">My Work</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark fullscreen">
+				
+				<div class="content">
+					<header>
+						<h2>Hello.</h2>
+					</header>
+					<p>Welcome to <strong>Feel Good Creations</strong> by Kikki Kopski.</p>
+					<footer>
+						<a href="#one" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>What I Do</h2>
+					</header>
+					<p>I make wearable ornament especially with metal. Sterling silver, gold, and brass are my favourite.
+						Then use hammers or acid etching for patterns, or a fine saw to cut out organic or geometric shapes.
+						I like pieces that have traces of handmade, not perfection. Just like kid's drawing, 
+						which makes it only one in the entire universe. 
+
+					</p>
+				</div>
+				<a href="#two" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Who I Am</h2>
+					</header>
+					<p>Born and raised in Japan. Now I reside in Aotearoa. Studied metalsmithing 
+						at Savanna College of Art and Design in Georgia, USA. </p>
+					<p>In my spare time, 
+						I love walking with my dog, Ollie, looking for unique stones and beads 
+						online in a massage chair, and making pressed flowers in my sketching book.
+					</p>
+				</div>
+				<a href="#work" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Work -->
+			<section id="work" class="main style3 primary">
+				<div class="content">
+					<header>
+						<h2>My Work</h2>
+						<p>Here are some of my pieces.For more pieces please visit my 
+							<a href="https://www.instagram.com/kikkikopski/" target="blank">Instagram</a>.
+						</p>
+							
+					</header>
+
+	<img src="{{ url_for('download_image', resource='/static/images/logo2.png') }}" width=70px alt="">
+					<!-- Gallery  -->
+						<div class="gallery">
+							<article class="from-left">
+								
+								<!-- <a href="static/images/fulls/pattern2.jpg" class="image fit"><img src="static/images/thumbs/pattern2.jpg" title="Patterns" alt="" /></a> -->
+								
+								<a href="{{ url_for('download_image', resource='227c.JPG') }}" 
+								class="image fit"><img src="{{ url_for('download_image', resource='227c.JPG') }}" title="Twist" alt="img" /></a>
+							    
+							</article>
+							<article class="from-right">
+								<!-- <a href="static/images/fulls/rectangle.jpg" class="image fit"><img src="static/images/thumbs/rectangle.jpg" title="Brass" alt="" /></a> -->
+								
+								<a href="{{ url_for('download_image', resource='dy.jpg') }}" 
+								class="image fit"><img src="{{ url_for('download_image', resource='dd.jpg') }}" title="Brass" alt="" /></a>
+							    
+							</article>
+							<article class="from-left">
+								<!-- <a href="static/images/fulls/blue.jpg" class="image fit"><img src="static/images/thumbs/blue.jpg" title="Precious Gems" alt="" /></a> -->
+								<a href="{{ url_for('download_image', resource='ken.jpg') }}" 
+								class="image fit"><img src="{{ url_for('download_image', resource='kend.jpg') }}" title="Hammer" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<!-- <a href="static/images/fulls/summer.jpg" class="image fit"><img src="static/images/thumbs/summer.jpg" title="Silver" alt="" /></a> -->
+								<a href="{{ url_for('download_image', resource='summer.jpg') }}" 
+								class="image fit"><img src="{{ url_for('download_image', resource='summer.jpg') }}" title="Silver" alt="" /></a>
+							</article>
+							<article class="from-left">
+								<!-- <a href="static/images/fulls/ken.jpg" class="image fit"><img src="static/images/thumbs/ken.jpg" title="Texture" alt="" /></a> -->
+								<a href="{{ url_for('download_image', resource='hairc.JPG') }}" 
+								class="image fit"><img src="{{ url_for('download_image', resource='hair2.jpg') }}" title="Hair" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<!-- <a href="static/images/fulls/hair2.jpg" class="image fit"><img src="static/images/thumbs/hair2.jpg" title="Everyday" alt="" /></a> -->
+								<a href="{{ url_for('download_image', resource='maddy.jpg') }}" 
+								class="image fit"><img src="{{ url_for('download_image', resource='maddy3.jpg') }}" title="Everyday" alt="" /></a>
+							</article>
+						</div>
+
+				</div>
+			</section>
+
+		<!-- Contact -->
+			<section id="contact" class="main style3 secondary">
+				<div class="content">
+
+					<!-- {% for msg in get_flashed_messages() %}
+					<div class="flash-message" style="color:purple">
+						<img class='kikki-logo2' src="{{ url_for('download_image', resource='logo2.png') }}" alt="">
+					{{ msg }}
+					</div>
+					{% endfor %} -->
+
+					{% for msg in get_flashed_messages() %}
+					<div class="alert flash-message">
+						<span class='closebtn' onclick="this.parentElement.style.display='none';">&times;</span>
+					{{ msg }}
+					</div>
+					{% endfor %}
+
+
+					<header>
+						<h2>Say Hello.</h2>
+						
+						<p>If you don't hear back from me within 48 hours please check your Junk folder! </p>
+					</header>
+					<div class="box">
+						<!-- <form method="post" action="">
+							<div class="fields">
+								<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
+								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
+								<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+							</div>
+							<ul class="actions special">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form> -->
+
+
+
+						<form action="" method="POST" novalidate>
+							<div class="fields">
+							{{ form.hidden_tag() }}
+							<div class="field half">
+								{{ form.name.label }}
+								{{ form.name(placeholder="Your name")}}
+				
+								{% if form.name.errors %}
+								{% for error in form.name.errors %}
+								<span style="color:purple;">{{ error }}</span><br>
+								{% endfor %}
+								{% endif %}
+				
+							  </div>
+				
+							<div class="field half">
+								{{form.email.label}}
+								{{ form.email(placeholder="name@example.com") }}
+				
+								{% if form.email.errors %}
+								{% for error in form.email.errors %}
+								<span style="color:purple;">{{ error }}</span><br>
+								{% endfor %}
+								{% endif %}
+							  </div>
+				
+							  <div class="field">
+								{{form.message.label}}
+								{{ form.message(placeholder="Your message goes here.", rows='6') }}
+				
+								{% if form.message.errors %}
+								{% for error in form.message.errors %}
+								<span style="color:purple;">{{ error }}</span><br>
+								{% endfor %}
+								{% endif %}
+							  </div>
+							</div>
+							<ul class="actions special">
+								<li>{{ form.submit(class_='btn btn-dark btn-lg contact-button') }}</li>
+							</ul>
+						</form>
+						
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+
+				<!-- Icons -->
+					<ul class="icons">
+						
+						<li><a href="https://www.facebook.com/kikkikopskijewellery/" class="icon brands fa-facebook-f" target="'blank"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/kikkikopski/" class="icon brands fa-instagram" target="'blank"><span class="label">Instagram</span></a></li>
+						
+						
+					</ul>
+
+				<!-- Menu -->
+					<ul class="menu">
+
+						<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a> 
+							 Creation: <a href="https://aioakenfull.com" target="blank">Ai Oakenfull</a></li>
+					</ul>
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.poptrox.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+			
+		</body>
+	</body>
+</html>

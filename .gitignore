@@ -1,0 +1,9 @@
+venv
+__pycache__
+.env
+*.jpg
+*.png
+dev_setup.sh
+
+#Allow
+!/static/assets/css/images/overlay.png
