@@ -27,7 +27,7 @@
 		
 			<header id="header">
 				
-				<!-- <img src="static/images/logo2.png" width=70px alt=""> -->
+				
 				<img class='kikki-logo' src="{{ url_for('download_image', resource='logo2.png') }}" alt="">
 				<nav>
 					<ul>
@@ -144,12 +144,7 @@
 			<section id="contact" class="main style3 secondary">
 				<div class="content">
 
-					<!-- {% for msg in get_flashed_messages() %}
-					<div class="flash-message" style="color:purple">
-						<img class='kikki-logo2' src="{{ url_for('download_image', resource='logo2.png') }}" alt="">
-					{{ msg }}
-					</div>
-					{% endfor %} -->
+					
 
 					{% for msg in get_flashed_messages() %}
 					<div class="alert flash-message">
