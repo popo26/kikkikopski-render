@@ -10,9 +10,6 @@ load_dotenv()
 app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY')
 
-#For Render
-from werkzeug.middleware.proxy_fix import ProxyFix
-app.wsgi_app = ProxyFix(app.wsgi_app)
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 HTTPS_REDIRECT = True if os.environ.get('HTTPS_REDIRECT') else False
