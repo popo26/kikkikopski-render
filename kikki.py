@@ -22,10 +22,11 @@ ACL = 'public-read'
 S3_BUCKET_NAME = os.getenv('S3_BUCKET_NAME')
 S3_REGION = os.getenv('S3_REGION') 
 S3_BUCKET_PATH = os.getenv('S3_BUCKET_PATH')
-# MAIL_EMAIL=os.getenv('MAIL_EMAIL')
-# MAIL_PASSWORD=os.getenv('MAIL_PASSWORD')
-MAIL_EMAIL=os.environ.get('MAIL_EMAIL')
-MAIL_PASSWORD=os.environ.get('MAIL_PASSWORD')
+MAIL_EMAIL=os.getenv('MAIL_EMAIL')
+MAIL_PASSWORD=os.getenv('MAIL_PASSWORD')
+#For Render
+MAIL_PORT=os.getenv('MAIL_PORT')
+
 
 if HTTPS_REDIRECT == True:
     from flask_talisman import Talisman
@@ -54,7 +55,7 @@ def index():
             email = request.form['email']
             message = request.form['message']
 
-            with smtplib.SMTP("smtp.gmail.com") as connection:
+            with smtplib.SMTP("smtp.gmail.com", MAIL_PORT) as connection:
                 connection.starttls()
                 connection.login(MAIL_EMAIL, MAIL_PASSWORD)
                 connection.sendmail(
