@@ -55,8 +55,8 @@ def index():
             email = request.form['email']
             message = request.form['message']
 
-            with smtplib.SMTP("smtp.gmail.com", MAIL_PORT) as connection:
-                connection.starttls()
+            with smtplib.SMTP_SSL("smtp.gmail.com", MAIL_PORT) as connection:
+                # connection.starttls()
                 connection.login(MAIL_EMAIL, MAIL_PASSWORD)
                 connection.sendmail(
                     from_addr= email, 
