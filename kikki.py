@@ -22,8 +22,10 @@ ACL = 'public-read'
 S3_BUCKET_NAME = os.getenv('S3_BUCKET_NAME')
 S3_REGION = os.getenv('S3_REGION') 
 S3_BUCKET_PATH = os.getenv('S3_BUCKET_PATH')
-MAIL_EMAIL=os.getenv('MAIL_EMAIL')
-MAIL_PASSWORD=os.getenv('MAIL_PASSWORD')
+# MAIL_EMAIL=os.getenv('MAIL_EMAIL')
+# MAIL_PASSWORD=os.getenv('MAIL_PASSWORD')
+MAIL_EMAIL=os.environ.get('MAIL_EMAIL')
+MAIL_PASSWORD=os.environ.get('MAIL_PASSWORD')
 
 if HTTPS_REDIRECT == True:
     from flask_talisman import Talisman
@@ -60,7 +62,6 @@ def index():
                     to_addrs=MAIL_EMAIL, 
                     msg=f"Subject:Received a message from Kikki Kopski site\n\n{message}\nFrom: {name}\n{email}")
                
-              
             flash("Successfully submitted!")
             return redirect(url_for('index', _anchor='contact'))
         else:
